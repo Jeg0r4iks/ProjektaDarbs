@@ -1,0 +1,1 @@
+# Kvalifikacijas_darbs_JegorsAnosovsDP3-1
