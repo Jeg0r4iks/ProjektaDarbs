@@ -1,11 +1,9 @@
-/* Обнуление отступов по умолчанию */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
   }
   
-  /* Стиль для body */
   body {
     font-family: 'Gill Sans', sans-serif;
     display: flex;
@@ -16,24 +14,23 @@
     background-color: #f4f4f4;
   }
   
-  /* Стиль для заголовка сайта */
   .site-header {
-    position: fixed; /* Фиксируем заголовок в верхней части страницы */
-    top: 20px; /* Отступ от верхней части */
+    position: fixed; 
+    top: 20px; 
     left: 50%;
-    transform: translateX(-50%); /* Центрирование по горизонтали */
+    transform: translateX(-50%); 
     text-align: center;
   }
   
   .site-header h1 {
-    font-size: 48px; /* Крупный размер шрифта */
-    color: #333; /* Цвет текста */
+    font-size: 48px;
+    color: #333; 
     font-weight: bold;
   }
   
-  /* Стиль для основного контента */
+  
   main {
-    margin-top: 100px; /* Чтобы контент был ниже заголовка */
+    margin-top: 100px; 
     text-align: center;
     font-size: 20px;
   }
