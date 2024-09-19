@@ -1,4 +1,4 @@
-# Kvalifikacijas_darbs_JegorsAnosovsDP3-1
+# Projekta darbs
 
 # Mājaslapa par modes jaunumiem 
 
