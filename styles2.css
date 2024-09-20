@@ -1,0 +1,30 @@
+.flex-container {
+    display: flex;
+}
+
+.flex-container > div {
+    margin: 40px;
+    padding: 50px;
+    border-radius: 10%;
+    font-size: 30px;
+    background-color: rgb(220, 233, 245);
+}
+
+.flex-container > div > img {
+    border-radius: 10%;
+}
+
+a:hover {
+    font-size: 120%;
+    background-color: yellowgreen;
+    width: 300px; 
+    transition: 1s;
+}
+
+.flex-container > div > button:hover {
+    width: 100px;
+    height: 100px;
+    transition: 1s;
+}
+
+ 
