@@ -1,9 +1,35 @@
+body {
+    font-family: Helvetica;
+}
+
 h1 {
     text-align: center;
 }
 
+.nav-menu {
+    display: flexbox;
+    list-style-type: none;
+    text-align: center;
+}
+
+.nav-menu > li {
+    margin: 10px; 
+    margin-bottom: 10px;
+}
+
+.nav-menu > li > a {
+    text-decoration: none;
+    transition: 0.5s;
+}
+
+.nav-menu > li > a:hover {
+    font-weight: bold;
+    font-size: larger;
+    transition: 0.5s; 
+}
+
 .flex-container {
-    display: flex;
+    display: flex; 
 }
 
 .flex-container > div {
