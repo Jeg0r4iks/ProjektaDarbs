@@ -1,18 +1,25 @@
 body {
     font-family: Helvetica;
+    background-color: aliceblue;
 }
 
 h1 {
     text-align: center;
+    font-family: Helvetica;
+    font-weight: bold;
+    font-size: 50px;
+    color: rgb(5, 5, 59);
 }
 
 .nav-menu {
-    display: flexbox;
     list-style-type: none;
     text-align: center;
 }
 
 .nav-menu > li {
+    display: inline;
+    background-image: linear-gradient(rgb(47, 184, 165),rgb(116, 159, 197));
+    border-radius: 20%;
     margin: 10px; 
     margin-bottom: 10px;
 }
@@ -30,17 +37,28 @@ h1 {
 
 .flex-container {
     display: flex; 
+    justify-content: space-between;
 }
 
 .flex-container > div {
+    width: 300px; 
+    height: 450px;
     margin: 20px;
     padding: 50px;
     border-radius: 10%;
     font-size: 30px;
+    color: rgb(5, 5, 59);
+    font-weight: bold;
     background-color: rgb(220, 233, 245);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; 
+    align-items: center;
 }
 
 .flex-container > div > img {
+    max-width: 100%; 
+    max-height: 200px;
     border-radius: 10%; 
 }
 
@@ -49,6 +67,7 @@ h1 {
     width: 80px; 
     font-size: 30px;
     background-color: lightblue;
+    font-weight: bold;
     border: none;
     border-radius: 5px;
     transition: 0.5s;
@@ -60,5 +79,66 @@ h1 {
     width: 110px; 
     background-color: yellowgreen;
     transition: 0.5s;
+}
+
+.dark-mode {
+    background-color: rgba(43, 42, 42, 0.986);
+    color:white;
+}
+
+.dark-mode > button {
+    background-color: rgba(43, 42, 42, 0.986);
+    color: white;
+}
+
+.dark-mode > h1 {
+    color: white;
+}
+
+.dark-mode > .flex-container > div {
+    color: white;
+    background-color: rgba(43, 42, 42, 0.986);
+}
+
+.dark-mode > .flex-container > div > button {
+    height: 70px;
+    width: 80px; 
+    background-color: rgb(108, 108, 108);
+    color: white;
+    font-size: 30px;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    transition: 0.5s;
+}
+
+.dark-mode > .flex-container > div > button:hover {
+    font-size: 120%;
+    height: 100px;
+    width: 110px; 
+    background-color: rgb(202, 202, 202);
+    transition: 0.5s;
+}
+
+.dark-mode .nav-menu > li {
+    background-image: linear-gradient(grey, lightgrey); /* Новый градиент для темного режима */
+}
+
+button {
+    height: 40px;
+    width: 50px; 
+    font-weight: bold;
+    font-size: 15px;
+    color:rgb(5, 5, 59);
+    background-color: lightblue;
+    border: none; 
+    border-radius: 5px;
+    transition: 0.5s;
+}
+
+button:hover {
+    height: 45px;
+    width: 50px;
+    transition: 0.5;
 }
 
