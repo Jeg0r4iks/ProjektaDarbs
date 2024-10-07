@@ -2,7 +2,6 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles2.css">
     <script src="https://kit.fontawesome.com/532043a30d.js" crossorigin="anonymous"></script>    
     <script> 
@@ -12,19 +11,16 @@
 
             var darkModeButton = document.querySelector('.nav-menu button');
             if (element.classList.contains("dark-mode")) {
-                darkModeButton.style.backgroundColor = 'grey';
+                darkModeButton.style.backgroundColor = 'rgba(43, 42, 42, 0.986)';
                 darkModeButton.textContent = 'Light mode';
             } else {
-                darkModeButton.style.backgroundColor = 'lightblue';
+                darkModeButton.style.backgroundColor = 'rgb(252, 250, 238)';
                 darkModeButton.textContent = 'Dark mode';
             } 
         }
     </script>
-    <title>Veikals</title>
 </head>
-
 <body> 
-    <h1>Veikals</h1>
     <nav>
         <ul class="nav-menu">
             <li><i class="fa-solid fa-house"></i><a href="#home">Home</a></li>
