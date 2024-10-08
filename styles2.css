@@ -44,6 +44,7 @@ nav {
 
 .nav-menu li a:hover {
     font-weight: bold;
+    background-color: rgba(242, 226, 206, 0.8);
     transition: 0.5s; 
 }
 
@@ -61,6 +62,52 @@ nav {
 
 .nav-menu button:hover {
     font-weight: bold;
+}
+
+/*Dropdown menu*/
+
+.dropdown {
+    position: relative; 
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: rgb(250, 248, 239);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    width: 100px;
+    z-index: 1;
+    border-radius: 4px; 
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown-content li a {
+    text-align: left;
+    text-decoration: none;
+    color: rgb(77, 34, 44);
+    display: block;
+    transition: 0.3s;
+}
+
+.dropdown-content li a:hover {
+    background-color: rgba(242, 226, 206, 0.8);
+}
+
+/*Dark-mode dropdown*/
+
+.dark-mode .dropdown-content {
+    background-color: rgba(43, 42, 42, 0.986); 
+}
+
+.dark-mode .dropdown-content li a {
+    color: white; 
+}
+
+.dark-mode .dropdown-content li a:hover {
+    background-color: rgba(100, 100, 100, 0.8); 
 }
 
 /*Kartītes*/
@@ -84,7 +131,7 @@ nav {
     color: rgb(77, 34, 44);
     border-radius: 2%;
     background-color: rgb(242, 226, 206);
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5); 
     flex-direction: column;
     justify-content: space-between; 
     align-items: center;
@@ -95,6 +142,15 @@ nav {
     text-align: center;
 }
 
+@keyframes scaleUp {
+    0% {
+        transform: scale(1); 
+    }
+    100% {
+        transform: scale(1.1);
+    }
+}
+
 .flex-container div img {
     max-width: 100%; 
     max-height: 200px;
@@ -102,11 +158,16 @@ nav {
     justify-content: center;
     align-self: center; 
     margin: 10px 0;
+    transition: transform 0.3s ease;
+}
+
+.flex-container div img:hover {
+    animation: scaleUp 0.3s; 
 }
 
 .flex-container div button {
-    height: 50px;
-    width: 60px; 
+    height: 60px;
+    width: 70px; 
     font-size: 20px;
     background-color: rgb(242, 226, 206);
     color: rgb(77, 34, 44); 
@@ -165,3 +226,53 @@ nav {
 .dark-mode button {
     color: white; 
 }
+
+/*Modal logs*/
+
+.modal {
+    display: none; 
+    position: fixed; 
+    z-index: 1; 
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%; 
+    background-color: rgb(0, 0, 0); 
+    background-color: rgba(0, 0, 0, 0.4); 
+}
+
+.modal-content {
+    background-color: rgb(250, 248, 239);
+    margin: 20% auto;
+    padding: 20px;
+    border: none;
+    width: 80%; 
+    border-radius: 4px; 
+}
+
+.close {
+    color: black;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.dark-mode .modal-content {
+    background-color: rgba(43, 42, 42, 0.986); 
+    color: white; 
+}
+
+
+.dark-mode .modal .close {
+    color: white; 
+}
+
+/*Ierobežojumi*/
+
