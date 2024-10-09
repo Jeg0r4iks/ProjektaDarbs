@@ -274,5 +274,21 @@ nav {
     color: white; 
 }
 
-/*Ierobežojumi*/
+/*Hamburgera izvelne*/
 
+.hamburger-menu {
+    display: none;
+}
+
+@media screen and (max-width: 768px) {
+    .nav-menu {
+        display: none;
+    }
+
+    .hamburger-menu {
+        display: block;
+    }
+
+    
+
+}
