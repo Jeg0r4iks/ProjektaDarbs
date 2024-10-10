@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="styles2.css">
-    <script src="https://kit.fontawesome.com/532043a30d.js" crossorigin="anonymous"></script>    
+    <script src="https://kit.fontawesome.com/532043a30d.js" crossorigin="anonymous"></script> 
     <script> 
         function darkmode() {
             var element = document.body; 
@@ -22,16 +22,29 @@
         function openModal(title, description) {
             document.getElementById("modal-title").textContent = title;
             document.getElementById("modal-description").textContent = description;
+            document.getElementById("myModal").style.display = "block";
         }
 
         function closeModal() {
             document.getElementById("myModal").style.display = "none";
         }
-    </script>
+        
+        function toggleMenu() {
+            const navMenu = document.querySelector('.nav-menu');
+            navMenu.classList.toggle('active');
+        }
+
+        window.addEventListener('resize', function () {
+        const navMenu = document.querySelector('.nav-menu');
+        if (window.innerWidth > 768) {
+            navMenu.classList.remove('active'); 
+        }
+        });
+    </script>   
 </head>
 <body> 
     <nav>
-        <div class="hamburger-menu" onclick="toggleMenu">
+        <div class="hamburger-menu" onclick="toggleMenu()">
             <i class="fa-solid fa-bars"></i>
         </div>
         <ul class="nav-menu">
@@ -75,33 +88,5 @@
             <p id="modal-description"></p>
         </div>
     </div>
-
-    <script src="https://kit.fontawesome.com/532043a30d.js" crossorigin="anonymous"></script>
-    <script> 
-        function darkmode() {
-            var element = document.body; 
-            element.classList.toggle("dark-mode");
-
-            var darkModeButton = document.querySelector('.nav-menu button');
-            if (element.classList.contains("dark-mode")) {
-                darkModeButton.style.backgroundColor = 'rgba(43, 42, 42, 0.986)';
-                darkModeButton.textContent = 'Light mode';
-            } else {
-                darkModeButton.style.backgroundColor = 'rgb(252, 250, 238)';
-                darkModeButton.textContent = 'Dark mode';
-            } 
-        }
-
-        function openModal(title, description) {
-            document.getElementById("modal-title").textContent = title;
-            document.getElementById("modal-description").textContent = description;
-            document.getElementById("myModal").style.display = "block";
-        }
-
-        function closeModal() {
-            document.getElementById("myModal").style.display = "none";
-        }
-
-    </script>
 </body>
 </html>

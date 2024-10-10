@@ -278,17 +278,28 @@ nav {
 
 .hamburger-menu {
     display: none;
+    cursor: pointer;
+    font-size: 24px;
+    padding: 10px;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 700px) {
     .nav-menu {
-        display: none;
+        display: none; 
+        position: absolute;
+        top: 60px; 
+        left: 0; 
+        width: 200px; 
+        flex-direction: column; 
+        padding: 10px;
+        z-index: 1000; 
     }
 
     .hamburger-menu {
         display: block;
     }
+}
 
-    
-
+.nav-menu.active {
+    display: block;
 }
